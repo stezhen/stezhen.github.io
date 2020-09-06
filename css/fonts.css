@@ -1,0 +1,14 @@
+
+
+
+/* @font-face*/
+
+@font-face{
+    font-family: "Orkney";
+    src: '../fonts/orkney/Orkney Medium.ttf';
+}
+
+@font-face{
+    font-family: "Staaliches";
+    src: '../fonts/Staaliches/Staaliches-Regular.ttf';
+}
