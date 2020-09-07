@@ -5,10 +5,10 @@
 
 @font-face{
     font-family: "Orkney";
-    src: '../fonts/orkney/Orkney Medium.ttf';
+    src: url("../fonts/orkney/Orkney Medium.ttf");
 }
 
 @font-face{
     font-family: "Staaliches";
-    src: '../fonts/Staaliches/Staaliches-Regular.ttf';
+    src: ("../fonts/Staaliches/Staaliches-Regular.ttf");
 }
