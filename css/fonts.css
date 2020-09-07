@@ -10,5 +10,5 @@
 
 @font-face{
     font-family: "Staaliches";
-    src: ("../fonts/Staaliches/Staaliches-Regular.ttf");
+    src: url("../fonts/Staaliches/Staaliches-Regular.ttf");
 }
