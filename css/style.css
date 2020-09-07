@@ -51,7 +51,7 @@
 
 /*fonts */
 h1{
-    font-family: Staaliches;
+    font-family: Staatliches;
     font-style: normal;
     font-weight: normal;
     font-size: 75px;
@@ -61,7 +61,7 @@ h1{
     color: #0B0014;
 }
 h2{
-    font-family: Staaliches;
+    font-family: Staatliches;
     font-style: normal;
     font-weight: normal;
     font-size: 48px;
@@ -184,7 +184,7 @@ body, html{
 
    a.logo{
     float: left;
-    font-family: Staaliches;
+    font-family: Staatliches;
     font-style: normal;
     font-weight: normal;
     text-decoration: none;
