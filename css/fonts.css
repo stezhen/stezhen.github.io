@@ -5,7 +5,28 @@
 
 @font-face{
     font-family: "Orkney";
-    src: url("../fonts/orkney/Orkney Medium.ttf");
+    font-weight: normal;
+    src: url("../fonts/orkney/Orkney Regular.ttf");
+}
+@font-face{
+    font-family: "Orkney";
+    font-weight: bold;
+    src: url("../fonts/orkney/Orkney\ Bold.ttf");
+}
+
+@font-face{
+    font-family: "Orkney-Light";
+    font-weight: light;
+    src: url("../fonts/orkney/Orkney\ Light.ttf");
+}
+@font-face{
+    font-family: "Orkney-Medium";
+    src: url("../fonts/orkney/Orkney\ Medium.ttf")
+}
+@font-face{
+    font-family: "Orkney-Italic";
+    font-style: italic;
+    src: url("../fonts/orkney/Orkney\ Regular\ Italic.ttf")
 }
 
 @font-face{

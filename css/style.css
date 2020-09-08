@@ -162,26 +162,228 @@ body, html{
     justify-content: center;
 }
 
-.navbar {
-   
-    overflow: hidden;
-    background: #F8F3F0;
+
+  /* navhead */
+  
+  .navhead {
+    top: 0;
+    left: 0;
+    background-color: #f8f3f0;
     box-shadow: 0px 0px 40px rgba(16, 16, 16, 0.1);
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
     width: 100vw; /* Full width */
     height: 9vh;
-   /* padding-left: 30vw;
-    padding-right: 10vw; */
-    z-index: 10;
-    padding: 0 4vw;
+    min-height: 50px;
+    position: fixed;
+    z-index: 3;
+    vertical-align: center;
   }
+  
+  .navhead ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #f8f3f0;
+  }
+  
+  .navhead li a {
+    display: block;
+    position: relative;
+    padding: 3vh 4vw;
+    text-decoration: none;
+    font-family: "Orkney-Medium", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    color: #000000;
+    text-align: center;
+  }
+  
 
+/* Change background on mouse-over */
+
+ .navhead a.left:before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    bottom: 0px;
+    left: 0;
+    background: rgba(119, 51, 68, 0.3);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+  .navhead a.left:hover:before,
+  .navhead .menu-btn:hover {
+    visibility: visible;
+    width: 100%;
+}
+  
+  .navhead .logo {
+    display: block;
+    float: left;
+    padding: 0px 4vw;
+    text-decoration: none;
+    font-family: Staatliches;
+    letter-spacing: 0.06em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    /* identical to box height */
+    text-align: center;
+    color: #000000;
+  }
+  
+  /* menu */
+  
+  .navhead .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .navhead .menu-icon {
+    cursor: pointer;
+    display: block;
+    float: right;
+    padding: 28px 4vw;
+    position: relative;
+    user-select: none;
+  }
+  
+  .navhead .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .navhead .menu-icon .navicon:before,
+  .navhead .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .navhead .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .navhead .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .navhead .menu-btn {
+    display: none;
+  }
+  
+  .navhead .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .navhead .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .navhead .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .navhead .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .navhead .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .navhead .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  @media screen and (max-width:360px){
+    .navhead .logo{
+
+        font-size: 30px;
+
+        }
+}
+  /* 48em = 768px */
+  
+  @media (min-width: 48em) {
+
+    .navhead li {
+      float: left;
+    }
+
+    .navhead ul {
+      margin: 0;
+      margin-right: 4vw;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+      background-color: #f8f3f0;
+    }
+    .navhead li a {
+      padding: 0px 3px;
+      margin: 3vh 20px 0 20px;
+
+    }
+    .navhead .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .navhead .menu-icon {
+      display: none;
+    }
+    .navhead a.left:before {
+      content: "";
+      position: absolute;
+      width: 0px;
+      height: 7px;
+      bottom: 4px;
+      left: 0;
+      background: rgba(119, 51, 68, 0.3);
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+  }
+    .navhead a.left:hover:before,
+    .navhead .menu-btn:hover {
+      visibility: visible;
+      width: 100%;
+    }
+
+    .navhead .logo {
+        display: block;
+        float: left;
+        padding: 0px 4vw;
+        text-decoration: none;
+        font-family: Staatliches;
+        letter-spacing: 0.06em;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        /* identical to box height */
+        text-align: center;
+        color: #000000;
+      }
+  
+  }
+  /*
 .navbar-right{
     float: right;
-}
+}*/
   /* Links inside the navbar */
-
+/*
    a.logo{
     float: left;
     font-family: Staatliches;
@@ -191,13 +393,15 @@ body, html{
     font-size: 40px;
     line-height: 0px;
     /* identical to box height */
-
+/*
     text-align: center;
     letter-spacing: 0.06em;
 
     color: #000000;
   }
+*/
 
+/*
     a.left{
         position: relative;
         float: right;
@@ -217,7 +421,7 @@ body, html{
     }
     
   /* Change background on mouse-over */
-    a.left:before {
+   /* a.left:before {
         content: "";
         position: absolute;
         width: 0px;
@@ -233,10 +437,8 @@ body, html{
         width: 100%;
         
   }
+*/
 
-  .main{
-      
-  }
 
   a.current{
         content: "";
@@ -254,7 +456,7 @@ body, html{
 .About{
     background-color: #F8F3F0;
     /*padding: 74px 169px;*/
-    padding: 9vh 15vw;
+    padding: 11vh 15vw;
 }
 .polaroidContainer2{
     position: relative;
@@ -520,8 +722,14 @@ ol{
     padding-top: 20px;
 }
 
+.project-section .polaroidContainer2{
+    margin-inline-start: 3em;
+    margin-inline-end: 3em;
+    margin-bottom: 3em;
+}
 .leftimage .polaroidContainer2{
     float: left;
+    margin-inline-start: 0;
     margin-inline-end: 3em;
     margin-bottom: 3em;
 }
@@ -529,6 +737,7 @@ ol{
 .rightimage .polaroidContainer2{
     float: right;
     margin-inline-start: 3em;
+    margin-inline-end: 0em;
     margin-bottom: 3em;
 }
 
